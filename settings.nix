@@ -5,7 +5,7 @@ rec {
 	username = "ktlyn";
 	
  	timezone = "Australia/Brisbane";
-  locale = "en_GB.UTF-8";
+  locale = "en_AU.UTF-8";
 	
 	shell = "zsh";
 	shellPkg = pkgs.zsh;
