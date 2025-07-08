@@ -8,7 +8,7 @@
     	powerManagement.finegrained = false;
 	    open = true;
     	nvidiaSettings = true;
-    	package = config.boot.kernelPackages.nvidiaPackages.production;
+    	package = config.boot.kernelPackages.nvidiaPackages.beta;
   	};
 
 	hardware.graphics = {
@@ -16,7 +16,7 @@
 		extraPackages = with pkgs; [
 		    #vulkan-loader
     		#vulkan-validation-layers
-    		#vulkan-extension-layer
+    		vulkan-extension-layer
 		];
 	};
 
