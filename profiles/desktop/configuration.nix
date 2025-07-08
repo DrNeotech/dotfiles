@@ -34,7 +34,7 @@
 	i18n = {
 		defaultLocale = settings.locale;
 		extraLocaleSettings = {
-			LC_ALL = settings.localte;
+			LC_ALL = settings.locale;
 		};
 	};
 
