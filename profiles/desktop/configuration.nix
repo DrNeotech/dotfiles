@@ -30,8 +30,9 @@
 	};
 
 	programs.${settings.shell}.enable = true;
+	programs.firefox.enable = true;
 
-    time.timeZone = settings.timezone;
+  time.timeZone = settings.timezone;
 
 	i18n = {
 		defaultLocale = settings.locale;
