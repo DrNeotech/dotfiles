@@ -8,7 +8,6 @@
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
 		../../system/software/hyprland.nix
-
 	];
 
     nixpkgs.config.allowUnfree = true;

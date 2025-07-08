@@ -18,8 +18,10 @@ in
   imports = [
 		../../software/programs/neofetch.nix
 		../../software/programs/spotify.nix
+    ../../software/programs/cava.nix
 
 		../../software/IDE/nvim.nix
+
   ];
 
   nixpkgs = {
@@ -48,7 +50,6 @@ in
     grim
     slurp
     mpv
-    fastfetch
     nvidia-vaapi-driver
     rofi-wayland
     obsidian
