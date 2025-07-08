@@ -87,9 +87,7 @@ in
     ];	
   };
 
-  programs.steam = {
-    enable = true;
-  }
+
 
   programs.neovim = {
     enable = true;
