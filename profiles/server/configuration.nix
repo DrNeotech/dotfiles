@@ -28,7 +28,7 @@
 
   programs.steam = {
     enable = true;
-  }
+  };
 
 	i18n = {
 		defaultLocale = settings.locale;
@@ -41,6 +41,7 @@
 		home-manager
 		git
 		vim
+		steam
 	];
 
 	system.stateVersion = "24.11";
