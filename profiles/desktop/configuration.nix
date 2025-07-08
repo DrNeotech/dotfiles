@@ -3,8 +3,8 @@
 	imports = [
 		./hardware-configuration.nix
 		../../system/hardware/sound.nix
-		../../system/hardware/bluetooth.nix
-		../../system/hardware/desktop/boot.nix
+		#../../system/hardware/bluetooth.nix
+		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
 	];
 
@@ -23,7 +23,7 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 	networking = {
-		hostname = "neotech-pc";
+		hostName = "neotech-pc";
 		networkmanager.enable = true;
 	};
 
