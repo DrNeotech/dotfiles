@@ -67,7 +67,6 @@ in
     python314
     jackett
     flaresolverr
-    steam
     tor-browser
     yazi
     direnv
