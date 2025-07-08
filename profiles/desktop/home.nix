@@ -58,7 +58,6 @@ in
     qbittorrent
     egl-wayland
     swaybg
-    spotify-player
     ffmpeg
     grim
     slurp
@@ -89,6 +88,8 @@ in
 
   programs.home-manager.enable = true;
   programs.git.enable = true;
+
+  programs.firefox.enable = true;
 
   programs.vscode= {
     enable = true;

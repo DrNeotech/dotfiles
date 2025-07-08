@@ -2,10 +2,17 @@
 {
 	imports = [
 		./hardware-configuration.nix
+
 		../../system/hardware/sound.nix
 		#../../system/hardware/bluetooth.nix
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
+		../../system/software/hyprland.nix
+	
+		../../software/programs/neofetch.nix
+		../../software/programs/spotify.nix
+
+		../../software/IDE/nvim.nix
 	];
 
     nixpkgs.config.allowUnfree = true;
