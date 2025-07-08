@@ -31,6 +31,7 @@
 
 	programs.${settings.shell}.enable = true;
 	programs.firefox.enable = true;
+	programs.steam.enable = true;
 
   time.timeZone = settings.timezone;
 
