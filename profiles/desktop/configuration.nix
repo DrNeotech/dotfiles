@@ -45,12 +45,14 @@
 	services.xserver.enable = true;
 	services.xserver.displayManager.gdm.enable = true;
 
+	programs.gnome-disks.enable = true;
+
 	environment.systemPackages = with pkgs; [
 		home-manager
 		git
 		vim
 		ntfs3g
-		exfat-utils
+		exfat
 	];
 
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
