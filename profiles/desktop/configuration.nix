@@ -50,6 +50,7 @@
 		git
 		vim
 		ntfs3g
+		exfat-utils
 	];
 
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
