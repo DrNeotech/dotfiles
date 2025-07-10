@@ -26,10 +26,6 @@
 
     time.timeZone = settings.timezone;
 
-  programs.steam = {
-    enable = true;
-  };
-
 	i18n = {
 		defaultLocale = settings.locale;
 		extraLocaleSettings = {

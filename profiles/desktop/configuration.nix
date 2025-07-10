@@ -7,7 +7,8 @@
 		#../../system/hardware/bluetooth.nix
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
-		../../system/software/hyprland.nix
+		../../system/software/wms/hyprland.nix
+    ../../system/software/shells/zsh.nix
 	];
 
     nixpkgs.config.allowUnfree = true;
