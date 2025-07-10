@@ -6,6 +6,7 @@
 		../../software/programs/neofetch.nix
 		../../software/programs/spotify.nix
     ../../software/programs/cava.nix
+    ../../software/programs/kitty.nix
 
 		../../software/IDE/nvim.nix
     ../../software/IDE/vscode.nix
