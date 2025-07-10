@@ -8,7 +8,7 @@
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
     
-		../../system/software/wms/hyprland.nix
+		../../system/software/wm/hyprland.nix
     
 	];
 
