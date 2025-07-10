@@ -45,6 +45,9 @@
 	services.xserver.enable = true;
 	services.xserver.displayManager.gdm.enable = true;
 
+	services.gvfs.enable = true;
+	services.udisks2.enable = true;
+
 	programs.gnome-disks.enable = true;
 
 	environment.systemPackages = with pkgs; [
