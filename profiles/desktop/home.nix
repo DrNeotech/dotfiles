@@ -12,7 +12,8 @@
     ../../software/IDE/vscode.nix
 
     ../../system/software/shells/zsh.nix
-  ] ++ (map (wm: ../../software/wm/${wm}.nix) settings.wms);
+    ../../software/wm/hyprland.nix
+  ];
 
   nixpkgs = {
     overlays = [];

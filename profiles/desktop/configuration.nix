@@ -8,7 +8,7 @@
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
     
-		../../system/software/wm/hyprland.nix
+		../../software/wm/hyprland.nix
     
 	];
 
@@ -34,6 +34,8 @@
 	programs.${settings.shell}.enable = true;
 	programs.firefox.enable = true;
 	programs.steam.enable = true;
+
+  programs.hyprland.enable = true;
 
   time.timeZone = settings.timezone;
 

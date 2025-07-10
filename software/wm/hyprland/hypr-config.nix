@@ -1,9 +1,6 @@
 { config, pkgs, settings, inputs, ... }: let
     #details = settings.themeDetails;
 in {
-  home.packages = with pkgs; [
-  ];
-
   wayland.windowManager.hyprland.settings = {
     monitor = [
       "DP-2, 1920x1080@165, 0x0, 1"
