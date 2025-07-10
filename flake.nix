@@ -22,7 +22,7 @@
                 pkgs = nixpkgs.legacyPackages.${settings.system};
                 modules = [
                     (./. + "/profiles" + ("/" + settings.profile) + "/home.nix")
-					inputs.stylix.homeModules.stylix
+					          inputs.stylix.homeModules.stylix
                     inputs.nixvim.homeManagerModules.nixvim
                 ];
                 extraSpecialArgs = {
