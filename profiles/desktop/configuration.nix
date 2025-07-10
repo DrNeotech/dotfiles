@@ -9,7 +9,7 @@
 		../../system/hardware/desktop/drivers.nix
     
 		../../system/software/wms/hyprland.nix
-    ../../system/software/shells/zsh.nix
+    
 	];
 
     nixpkgs.config.allowUnfree = true;
