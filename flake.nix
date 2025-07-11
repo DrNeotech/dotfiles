@@ -1,7 +1,7 @@
 {
 	description = "ktlyn NixOS";
 
-    outputs = { self, nixpkgs, home-manager, ... } @ inputs: let
+    outputs = { self, nixpkgs, home-manager, lix-module, ... } @ inputs: let
         settings = import (./. + "/settings.nix") {inherit pkgs inputs;};
         pkgs = import nixpkgs {system = settings.system;};
 	in {
@@ -9,6 +9,7 @@
             ${settings.hostname} = nixpkgs.lib.nixosSystem {
                 modules = [
                     inputs.stylix.nixosModules.stylix
+                    lix-module.nixosModules.default
                     (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")
                 ];
                 specialArgs = {
@@ -24,6 +25,7 @@
                     (./. + "/profiles" + ("/" + settings.profile) + "/home.nix")
 					inputs.stylix.homeModules.stylix
                     inputs.nixvim.homeManagerModules.nixvim
+                    lix-module.nixosModules.default
                 ];
                 extraSpecialArgs = {
                     inherit inputs;
@@ -39,6 +41,11 @@
 			url = "github:nix-community/home-manager/master";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+        lix-module = {
+            url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.2-1.tar.gz";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
 		hyprland = {
             type = "git";
@@ -60,6 +67,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-    ags.url = "github:Aylur/ags";
+        ags.url = "github:Aylur/ags";
+        
 	};
 }

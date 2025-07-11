@@ -3,13 +3,14 @@
 	stylix = {
 		enable = true;
     autoEnable = false;
-		image = ../assets/wallpapers/patchy_2mon.png;
+		image = ../assets/wallpapers/dopesmoker.png;
+    contrast = 50;
 		polarity = "dark";
     opacity.terminal = 0.4;
     targets = {
       kitty.enable = true;
       hyprland.enable = true;
-      vscode.enable = true;
+      vscode.enable = false;
     };
 	};
 }
