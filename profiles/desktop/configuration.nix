@@ -10,6 +10,7 @@
     
 		../../software/wm/hyprland.nix
     
+    ../../themes/style.nix
 	];
 
     nixpkgs.config.allowUnfree = true;
@@ -35,8 +36,6 @@
 	programs.firefox.enable = true;
 	programs.steam.enable = true;
 
-  programs.hyprland.enable = true;
-
   time.timeZone = settings.timezone;
 
 	i18n = {
@@ -45,6 +44,8 @@
 			LC_ALL = settings.locale;
 		};
 	};
+
+	programs.hyprland.enable = true;
 
 	services.xserver.enable = true;
 	services.xserver.displayManager.gdm.enable = true;

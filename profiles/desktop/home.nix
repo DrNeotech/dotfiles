@@ -5,14 +5,16 @@
   imports = [
 		../../software/programs/neofetch.nix
 		../../software/programs/spotify.nix
-    ../../software/programs/cava.nix
-    ../../software/programs/kitty.nix
+    	../../software/programs/cava.nix
+    	../../software/programs/kitty.nix
 
 		../../software/IDE/nvim.nix
-    ../../software/IDE/vscode.nix
+    	../../software/IDE/vscode.nix
 
-    ../../system/software/shells/zsh.nix
-    ../../software/wm/hyprland.nix
+    	../../system/software/shells/zsh.nix
+    	../../software/wm/hyprland.nix
+
+    	../../themes/style.nix
   ];
 
   nixpkgs = {
@@ -66,6 +68,13 @@
   programs.git.enable = true;
 
   programs.firefox.enable = true;
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+      
+    };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

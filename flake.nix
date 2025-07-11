@@ -45,6 +45,12 @@
             url = "https://github.com/hyprwm/Hyprland";
             submodules = true;
         };
+
+        hyprland-plugins = {
+            url = "github:hyprwm/hyprland-plugins";
+            inputs.hyprland.follows = "hyprland";
+        };
+
 		nix-colors.url = "github:misterio77/nix-colors";
 
 		stylix.url = "github:danth/stylix";
@@ -54,5 +60,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+    ags.url = "github:Aylur/ags";
 	};
 }
