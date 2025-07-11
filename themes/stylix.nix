@@ -3,7 +3,7 @@
 	stylix = {
 		enable = true;
     autoEnable = false;
-		image = ../assets/wallpapers/kokoro.png;
+		image = ../assets/wallpapers/heaven_sent.png;
     #contrast = 50;
 		polarity = "dark";
     opacity.terminal = 1.0;
