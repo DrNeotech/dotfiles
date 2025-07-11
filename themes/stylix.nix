@@ -3,10 +3,10 @@
 	stylix = {
 		enable = true;
     autoEnable = false;
-		image = ../assets/wallpapers/dopesmoker.png;
+		image = ../assets/wallpapers/kokoro.png;
     #contrast = 50;
 		polarity = "dark";
-    opacity.terminal = 0.4;
+    opacity.terminal = 1.0;
     targets = {
       kitty.enable = true;
       hyprland.enable = true;
