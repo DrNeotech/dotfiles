@@ -1,6 +1,10 @@
 { settings, config, pkgs, lib, ... }:
 {
-	imports = [];
+	imports = [
+		./tmux.nix
+	];
+
+	programs.tmux.shell = "${pkgs.zsh}/bin/zsh";
 
 	programs.zsh = {
 		enable = true;

@@ -3,7 +3,7 @@
 	stylix = {
 		enable = true;
     autoEnable = false;
-		image = ../assets/wallpapers/heaven_sent.png;
+		image = ../assets/wallpapers/dopesmoker.png;
     #contrast = 50;
 		polarity = "dark";
     opacity.terminal = 1.0;
@@ -11,6 +11,7 @@
       kitty.enable = true;
       hyprland.enable = true;
       vscode.enable = false;
+      spotify-player.enable = true;
     };
 	};
 }

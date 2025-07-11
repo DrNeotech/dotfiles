@@ -12,6 +12,7 @@
     	../../software/IDE/vscode.nix
 
     	../../system/software/shells/zsh.nix
+      ../../system/software/shells/tmux.nix
     	../../software/wm/hyprland.nix
 
     	../../themes/stylix.nix
@@ -62,6 +63,7 @@
     tor-browser
     yazi
     direnv
+    vesktop
   ];
 
   programs.home-manager.enable = true;
