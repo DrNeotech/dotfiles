@@ -10,7 +10,7 @@
     
 		#../../software/wm/hyprland.nix
     
-    	../../themes/stylix.nix
+    	#../../themes/stylix.nix
 	];
 
 

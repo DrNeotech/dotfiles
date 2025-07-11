@@ -4,7 +4,7 @@
 		enable = true;
     autoEnable = false;
 		image = ../assets/wallpapers/dopesmoker.png;
-    contrast = 50;
+    #contrast = 50;
 		polarity = "dark";
     opacity.terminal = 0.4;
     targets = {
