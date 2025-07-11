@@ -6,22 +6,13 @@
 			"HDMI-A-1, 1920x1080@75, 1920x0, 1"
 		];
 
-    workspace = [
-      "1,monitor:DP-2,default:true"
-      "2,monitor:DP-2"
-      "3,monitor:DP-2"
-      "4,monitor:DP-2"
-      "5,monitor:DP-2"
-
-      "6,monitor:HDMI-A-1,default:true"
-      "7,monitor:HDMI-A-1"
-      "8,monitor:HDMI-A-1"
-      "9,monitor:HDMI-A-1"
-      "10,monitor:HDMI-A-1"
-    ];
-
 		exec-once = [
 			"swww-daemon"
+			"[workspace 3] steam"
+			"[workspace 6 silent] kitty yazi"
+			"[workspace 6 silent] kitty spotify_player"
+			"[workspace 6 silent] kitty cava"
+			"[workspace 7] vesktop"
 		];
 
 		debug = {
