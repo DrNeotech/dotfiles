@@ -14,7 +14,7 @@
     	../../system/software/shells/zsh.nix
     	../../software/wm/hyprland.nix
 
-    	../../themes/style.nix
+    	../../themes/stylix.nix
   ];
 
   nixpkgs = {

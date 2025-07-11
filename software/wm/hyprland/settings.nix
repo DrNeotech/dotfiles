@@ -18,11 +18,11 @@
 			gaps_in = 4;
 			gaps_out = 6;
 
-			border_size = 2;
+			border_size = 4;
 
 			# https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-			"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-			"col.inactive_border" = "rgba(595959aa)";
+			#"col.active_border" = "rgba(${config.lib.stylix.colors.base01}) rgba(${config.lib.stylix.colors.base01}) 45deg";
+			#"col.inactive_border" = "rgba(${config.lib.stylix.colors.base02})";
 
 			# Set to true enable resizing windows by clicking and dragging on borders and gaps
 			resize_on_border = false;
@@ -32,7 +32,7 @@
 		};
 
 		decoration = {
-			rounding = 0;
+			rounding = 4;
 
 			# Change transparency of focused and unfocused windows
 			active_opacity = 1;
@@ -42,7 +42,7 @@
 				enabled = true;
 				range = 4;
 				render_power = 3;
-				"color" = "rgba(1a1a1aee)";
+				#"color" = "rgba(${config.lib.stylix.colors.base01})";
 			};
 
 			# https://wiki.hyprland.org/Configuring/Variables/#blur

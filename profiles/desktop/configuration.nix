@@ -8,10 +8,11 @@
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
     
-		../../software/wm/hyprland.nix
+		#../../software/wm/hyprland.nix
     
-    ../../themes/style.nix
+    	../../themes/stylix.nix
 	];
+
 
     nixpkgs.config.allowUnfree = true;
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -35,8 +36,10 @@
 	programs.${settings.shell}.enable = true;
 	programs.firefox.enable = true;
 	programs.steam.enable = true;
+	programs.hyprland.enable = true;
 
-  time.timeZone = settings.timezone;
+
+  	time.timeZone = settings.timezone;
 
 	i18n = {
 		defaultLocale = settings.locale;
@@ -44,8 +47,6 @@
 			LC_ALL = settings.locale;
 		};
 	};
-
-	programs.hyprland.enable = true;
 
 	services.xserver.enable = true;
 	services.xserver.displayManager.gdm.enable = true;
