@@ -21,6 +21,18 @@
 			"$mainMod, R, exec, hyprctl reload"
 			"$mainMod ALT, B, togglespecialworkspace, magic"
 			"$mainMod, B, movetoworkspaceSilent, special:magic"
+
+			"$mainMod, KP_End, workspace, 1"
+			"$mainMod, KP_Down, workspace, 2"
+			"$mainMod, KP_Next, workspace, 3"
+			"$mainMod, KP_Left, workspace, 4"
+			"$mainMod, KP_Begin, workspace, 5"
+			"$mainMod, KP_Right, workspace, 6"
+			"$mainMod, KP_Home, workspace, 7"
+			"$mainMod, KP_Up, workspace, 8"
+			"$mainMod, KP_Prior, workspace, 9"
+			"$mainMod, KP_Insert, workspace, 10"
+
 		];
 		bindm = [
 			"$mainMod, mouse:272, movewindow"
