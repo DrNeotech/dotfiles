@@ -2,29 +2,33 @@
 {
 	imports = [
 		./hardware-configuration.nix
+		../../system/software/shells/ssh.nix
 	];
 
-    nixpkgs.config.allowUnfree = true;
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  	nixpkgs.config.allowUnfree = true;
+  	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    users.users.${settings.username} = {
-        isNormalUser = true;
-        shell = settings.shellPkg;
-        description = settings.username;
-        extraGroups = [ "wheel" "gamemode" ];
-    };
+  	users.users.${settings.username} = {
+    	isNormalUser = true;
+    	shell = settings.shellPkg;
+    	description = settings.username;
+    	extraGroups = [ "wheel" "gamemode" ];
+  	};
 
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 
 	networking = {
-		hostname = "neotech-pc";
+		hostname = "neotech-svr";
 		networkmanager.enable = true;
 	};
 
+  	networking.firewall.allowedTCPPorts = [ 22 ];
+  	networking.firewall.allowedUDPPorts = [ 22 ];
+
 	programs.${settings.shell}.enable = true;
 
-    time.timeZone = settings.timezone;
+  	time.timeZone = settings.timezone;
 
 	i18n = {
 		defaultLocale = settings.locale;
@@ -37,7 +41,6 @@
 		home-manager
 		git
 		vim
-		steam
 	];
 
 	system.stateVersion = "24.11";

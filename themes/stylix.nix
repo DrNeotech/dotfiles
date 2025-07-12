@@ -12,6 +12,10 @@
       hyprland.enable = true;
       vscode.enable = false;
       spotify-player.enable = true;
+      cava.enable = true;
+      vencord.enable = true;
+      vesktop.enable = true;
+      yazi.enable = true;
     };
 	};
 }

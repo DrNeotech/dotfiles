@@ -16,7 +16,7 @@
 			"$mainMod, Z, exec, rofi -show drun"
 			"$mainMod CTRL, Z, exec, rofi -show run"
 			"$mainMod, F, exec, nautilus -w"
-			", Print, exec, grim -g '$(slurp -d)' - | wl-copy" # FIX: slurp needs to be in double quotes
+			'', Print, exec, grim -g "$(slurp -d)" - | wl-copy'' # FIX: slurp needs to be in double quotes
 			"$mainMod, W, exec, bash /home/ktlyn/.local/bin/wallch.sh"
 			"$mainMod, R, exec, hyprctl reload"
 			"$mainMod ALT, B, togglespecialworkspace, magic"

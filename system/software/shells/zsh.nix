@@ -12,6 +12,7 @@
         enableCompletion = true;
         syntaxHighlighting.enable = true;
         shellAliases = {
+					tty-clock = "tty-clock -c -C 6 -t";
         };	
 	};
 

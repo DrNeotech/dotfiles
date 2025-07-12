@@ -4,18 +4,18 @@
 {
   imports = [
 		../../software/programs/neofetch.nix
-		../../software/programs/spotify.nix
-    	../../software/programs/cava.nix
+		#../../software/programs/spotify.nix
+    	#../../software/programs/cava.nix
     	../../software/programs/kitty.nix
 
-		../../software/IDE/nvim.nix
-    	../../software/IDE/vscode.nix
+		#../../software/IDE/nvim.nix
+    	#../../software/IDE/vscode.nix
 
     	../../system/software/shells/zsh.nix
-      ../../system/software/shells/tmux.nix
-    	../../software/wm/hyprland.nix
+      	../../system/software/shells/tmux.nix
+    	#../../software/wm/hyprland.nix
 
-    	../../themes/stylix.nix
+    	#../../themes/stylix.nix
   ];
 
   nixpkgs = {
@@ -35,49 +35,26 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
     steam
+    git
     kitty
-    qbittorrent
-    egl-wayland
-    swaybg
     ffmpeg
-    grim
-    slurp
-    mpv
-    nvidia-vaapi-driver
-    rofi-wayland
-    obsidian
-    tree
-    swww
-    wl-clipboard
-    waybar
     rustup
-    nautilus
-    gimp3-with-plugins
-    fzf
-    bluez
-    spotify
-    handbrake
-    python314
-    jackett
-    flaresolverr
-    tor-browser
     yazi
-    direnv
-    vesktop
-    gpu-screen-recorder
-    tty-clock
+    vim
+    neovim
+
+    glibc
+    ncompress
+    libgcc
+    steamcmd
   ];
 
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  programs.firefox.enable = true;
-
   wayland.windowManager.hyprland = {
-    enable = true;
-    settings = {
-      
-    };
+    enable = false;
+    settings = {};
   };
 
   # Nicely reload system units when changing configs

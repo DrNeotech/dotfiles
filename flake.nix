@@ -6,9 +6,20 @@
         pkgs = import nixpkgs {system = settings.system;};
 	in {
 		nixosConfigurations = {
-            ${settings.hostname} = nixpkgs.lib.nixosSystem {
+            "neotech-pc" = nixpkgs.lib.nixosSystem {
                 modules = [
                     inputs.stylix.nixosModules.stylix
+                    lix-module.nixosModules.default
+                    (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")
+                ];
+                specialArgs = {
+                    inherit inputs;
+                    inherit settings;
+                };
+            };
+            "neotech-svr" = nixpkgs.lib.nixosSystem {
+                modules = [
+                    #inputs.stylix.nixosModules.stylix
                     lix-module.nixosModules.default
                     (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")
                 ];

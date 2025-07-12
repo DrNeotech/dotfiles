@@ -11,6 +11,7 @@
 		#../../software/wm/hyprland.nix
     
     	#../../themes/stylix.nix
+		../../system/software/shells/ssh.nix
 	];
 
 
@@ -18,10 +19,10 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     users.users.${settings.username} = {
-        isNormalUser = true;
-        shell = settings.shellPkg;
-        description = "Kaitlyn Cancio-Newton";
-        extraGroups = [ "networkmanager" "wheel" ];
+      	isNormalUser = true;
+      	shell = settings.shellPkg;
+     	description = "Kaitlyn Cancio-Newton";
+      	extraGroups = [ "networkmanager" "wheel" ];
 		home = "/home/ktlyn";
     };
 
@@ -38,8 +39,10 @@
 	programs.steam.enable = true;
 	programs.hyprland.enable = true;
 
+	time.timeZone = settings.timezone;
 
-  	time.timeZone = settings.timezone;
+  	networking.firewall.allowedTCPPorts = [ 22 ];
+  	networking.firewall.allowedUDPPorts = [ 22 ];
 
 	i18n = {
 		defaultLocale = settings.locale;
@@ -66,5 +69,5 @@
 
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-	system.stateVersion = "24.11";
+	system.stateVersion = "25.05";
 }
