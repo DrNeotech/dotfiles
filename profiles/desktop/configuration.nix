@@ -36,13 +36,24 @@
 
 	programs.${settings.shell}.enable = true;
 	programs.firefox.enable = true;
-	programs.steam.enable = true;
+	programs.steam = {
+		enable = true;
+		remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+		dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+		localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+	};
+
+	hardware.bluetooth.enable = true; # enables support for Bluetooth
+  	hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+	services.blueman.enable = true;
+
 	programs.hyprland.enable = true;
 
 	time.timeZone = settings.timezone;
 
-  	networking.firewall.allowedTCPPorts = [ 22 ];
-  	networking.firewall.allowedUDPPorts = [ 22 ];
+  networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.allowedUDPPorts = [ 22 ];
 
 	i18n = {
 		defaultLocale = settings.locale;
@@ -53,6 +64,14 @@
 
 	services.xserver.enable = true;
 	services.xserver.displayManager.gdm.enable = true;
+	services.desktopManager.gnome.enable = true;
+
+	programs.wireshark = {
+		enable = true;
+		dumpcap.enable = true;
+		usbmon.enable = true;
+	};
+
 
 	services.gvfs.enable = true;
 	services.udisks2.enable = true;

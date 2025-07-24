@@ -19,7 +19,7 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 	networking = {
-		hostname = "neotech-svr";
+		hostName = settings.profile;
 		networkmanager.enable = true;
 	};
 
@@ -43,5 +43,5 @@
 		vim
 	];
 
-	system.stateVersion = "24.11";
+	system.stateVersion = "25.05";
 }

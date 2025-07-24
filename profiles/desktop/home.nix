@@ -5,17 +5,18 @@
   imports = [
 		../../software/programs/neofetch.nix
 		../../software/programs/spotify.nix
-    	../../software/programs/cava.nix
-    	../../software/programs/kitty.nix
+    ../../software/programs/cava.nix
+    ../../software/programs/kitty.nix
+    ../../software/programs/obs.nix
 
 		../../software/IDE/nvim.nix
-    	../../software/IDE/vscode.nix
+    ../../software/IDE/vscode.nix
 
-    	../../system/software/shells/zsh.nix
-      ../../system/software/shells/tmux.nix
-    	../../software/wm/hyprland.nix
+    ../../system/software/shells/zsh.nix
+    ../../system/software/shells/tmux.nix
+    ../../software/wm/hyprland.nix
 
-    	../../themes/stylix.nix
+    ../../themes/stylix.nix
   ];
 
   nixpkgs = {
@@ -66,6 +67,9 @@
     vesktop
     gpu-screen-recorder
     tty-clock
+    rpi-imager
+    zoom-us
+    kdePackages.kdenlive
   ];
 
   programs.home-manager.enable = true;
