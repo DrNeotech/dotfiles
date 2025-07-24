@@ -9,9 +9,8 @@
 		exec-once = [
 			"swww-daemon"
 			"[workspace 3] steam"
+			"[workspace 6 silent] kitty --session spotify.conf"
 			"[workspace 6 silent] kitty yazi"
-			"[workspace 6 silent] kitty spotify_player"
-			"[workspace 6 silent] kitty cava"
 			"[workspace 7] vesktop"
 		];
 

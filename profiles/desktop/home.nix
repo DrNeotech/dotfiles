@@ -32,6 +32,11 @@
     homeDirectory = "/home/ktlyn";
   };
 
+  home.sessionVariables = {
+    LIBVA_DRIVER_NAME = "nvidia";
+    VDPAU_DRIVER = "nvidia";
+  };
+
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
@@ -40,7 +45,7 @@
     qbittorrent
     egl-wayland
     swaybg
-    ffmpeg
+    ffmpeg_6-full
     grim
     slurp
     mpv
@@ -70,6 +75,9 @@
     rpi-imager
     zoom-us
     kdePackages.kdenlive
+    libva
+    libva-utils
+    #libva-nvidia-driver
   ];
 
   programs.home-manager.enable = true;

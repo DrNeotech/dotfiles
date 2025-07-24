@@ -1,7 +1,7 @@
 {config, pkgs, ...}:
 {
   programs.obs-studio = {
-    enable = withGUI;
+    enable = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
       obs-backgroundremoval
