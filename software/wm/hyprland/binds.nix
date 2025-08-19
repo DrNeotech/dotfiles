@@ -12,7 +12,7 @@
 			"$mainMod, P, pseudo," # dwindle
 			"$mainMod, J, togglesplit," # dwindle
 
-			"$mainMod_CONTROL,F,fullscreen"
+			"$mainMod CTRL, F, fullscreen"
 			"$mainMod, Z, exec, rofi -show drun"
 			"$mainMod CTRL, Z, exec, rofi -show run"
 			"$mainMod, F, exec, nautilus -w"
@@ -21,6 +21,7 @@
 			"$mainMod, R, exec, hyprctl reload"
 			"$mainMod ALT, B, togglespecialworkspace, magic"
 			"$mainMod, B, movetoworkspaceSilent, special:magic"
+			"$mainMod CTRL, S, exec, kitty --session spotify.conf"
 
 			"$mainMod, KP_End, workspace, 1"
 			"$mainMod, KP_Down, workspace, 2"

@@ -7,24 +7,29 @@
 		#../../system/hardware/bluetooth.nix
 		#../../system/hardware/desktop/boot.nix
 		../../system/hardware/desktop/drivers.nix
-    
+	
 		#../../software/wm/hyprland.nix
-    
-    	#../../themes/stylix.nix
+	
+		#../../themes/stylix.nix
 		../../system/software/shells/ssh.nix
 	];
 
+	boot.initrd.availableKernelModules = [
+		"nvidia_drm" "nvidia_modeset" "nvidia" "nvidia_uvm"
+	];
+	
+  	nixpkgs.config.allowUnfree = true;
+	nixpkgs.config.cudaSupport = true;
 
-    nixpkgs.config.allowUnfree = true;
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    users.users.${settings.username} = {
-      	isNormalUser = true;
-      	shell = settings.shellPkg;
-     	description = "Kaitlyn Cancio-Newton";
-      	extraGroups = [ "networkmanager" "wheel" ];
-		home = "/home/ktlyn";
-    };
+	users.users.${settings.username} = {
+		isNormalUser = true;
+		shell = settings.shellPkg;
+		description = "Kaitlyn Cancio-Newton";
+		extraGroups = [ "networkmanager" "wheel" ];
+			home = "/home/ktlyn";
+	};
 
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
@@ -52,8 +57,8 @@
 
 	time.timeZone = settings.timezone;
 
-  networking.firewall.allowedTCPPorts = [ 22 ];
-  networking.firewall.allowedUDPPorts = [ 22 ];
+  	networking.firewall.allowedTCPPorts = [ 22 ];
+  	networking.firewall.allowedUDPPorts = [ 22 ];
 
 	i18n = {
 		defaultLocale = settings.locale;
@@ -62,7 +67,9 @@
 		};
 	};
 
-	services.xserver.enable = true;
+   	virtualisation.virtualbox.host.enable = true;
+   	users.extraGroups.vboxusers.members = [ settings.username ];
+	
 	services.xserver.displayManager.gdm.enable = true;
 	services.desktopManager.gnome.enable = true;
 
@@ -84,6 +91,28 @@
 		vim
 		ntfs3g
 		exfat
+		libva
+		libva-utils
+		zulu24
+    	wineWowPackages.stable
+	
+    	# support 32-bit only
+    	wine
+	
+    	# support 64-bit only
+    	(wine.override { wineBuild = "wine64"; })
+	
+    	# support 64-bit only
+    	wine64
+	
+    	# wine-staging (version with experimental features)
+    	wineWowPackages.staging
+	
+    	# winetricks (all versions)
+    	winetricks
+	
+    	# native wayland support (unstable)
+    	wineWowPackages.waylandFull
 	];
 
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";

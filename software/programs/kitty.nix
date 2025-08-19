@@ -1,4 +1,4 @@
-{settings, lib, config, ...}:
+{settings, lib, config, inputs, ...}:
 {
   home.file.".config/kitty/vim-mode.lua".text = ''
 local api = vim.api
@@ -15,6 +15,13 @@ api.nvim_buf_delete(term_buf, { force = true })
 vim.bo.modified = false
 api.nvim_win_set_cursor(0, {api.nvim_buf_line_count(0), 0})
   '';
+
+  home.file.".config/kitty/spotify.conf".text = ''
+layout splits
+launch spotify_player
+launch --location=hsplit --bias=22 cava
+launch --location=vsplit --bias=40 tty-clock -c -C 6 -t
+    '';
 
   programs.kitty = {
     enable = true;
@@ -96,5 +103,8 @@ api.nvim_win_set_cursor(0, {api.nvim_buf_line_count(0), 0})
       "ctrl+shift+backspace" = "restore_font_size";
       "ctrl+shift+f6" = "set_font_size 16.0";
     };
+
+
+
   };
 }

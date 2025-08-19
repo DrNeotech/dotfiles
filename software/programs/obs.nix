@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, inputs, ...}:
 {
   programs.obs-studio = {
     enable = true;
@@ -6,6 +6,10 @@
       wlrobs
       obs-backgroundremoval
       obs-pipewire-audio-capture
+      obs-vaapi
     ];
+    package = (pkgs.obs-studio.override {
+      cudaSupport = true;
+    });
   };
 }

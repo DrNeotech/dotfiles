@@ -8,6 +8,7 @@
     ../../software/programs/cava.nix
     ../../software/programs/kitty.nix
     ../../software/programs/obs.nix
+    ../../software/programs/retroarch.nix
 
 		../../software/IDE/nvim.nix
     ../../software/IDE/vscode.nix
@@ -75,10 +76,10 @@
     rpi-imager
     zoom-us
     kdePackages.kdenlive
-    libva
-    libva-utils
+    btop
     #libva-nvidia-driver
   ];
+
 
   programs.home-manager.enable = true;
   programs.git.enable = true;

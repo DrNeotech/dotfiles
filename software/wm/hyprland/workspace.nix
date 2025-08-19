@@ -2,17 +2,19 @@
 {
   wayland.windowManager.hyprland.settings = {
     workspace = [
-      "1,monitor:DP-3,default:true"
-      "2,monitor:DP-3"
-      "3,monitor:DP-3"
-      "4,monitor:DP-3"
-      "5,monitor:DP-3"
-
-      "6,monitor:HDMI-A-1,default:true,gapsin:24,gapsout:64,rounding 25,floating:1,layoutopt:orientation:right"
+      "1,monitor:HDMI-A-1,default:true"
+      "4,monitor:HDMI-A-1"
       "7,monitor:HDMI-A-1"
-      "8,monitor:HDMI-A-1"
-      "9,monitor:HDMI-A-1"
-      "10,monitor:HDMI-A-1"
+
+      "2,monitor:DP-5,default:true"
+      "5,monitor:DP-5"
+      "8,monitor:DP-5"
+
+      "9,monitor:HDMI-A-3,default:true,gapsin:24,gapsout:64,rounding 25,floating:1,layoutopt:orientation:right"
+      "7,monitor:HDMI-A-3"
+      "8,monitor:HDMI-A-3"
+      "9,monitor:HDMI-A-3"
+      "10,monitor:HDMI-A-3"
     ];
 
     windowrule = [

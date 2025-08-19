@@ -2,6 +2,7 @@
 {
 	wayland.windowManager.hyprland.settings = {
 		monitor = [
+			"DP-2, 1920x1080@60, -1080x-655, 1, transform, 3"
 			"DP-3, 1920x1080@165, 0x0, 1"
 			"HDMI-A-1, 1920x1080@75, 1920x0, 1"
 		];
@@ -11,7 +12,7 @@
 			"[workspace 3] steam"
 			"[workspace 6 silent] kitty --session spotify.conf"
 			"[workspace 6 silent] kitty yazi"
-			"[workspace 7] vesktop"
+			"[workspace 1] vesktop"
 		];
 
 		debug = {
@@ -33,6 +34,12 @@
 
 			# Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
 			allow_tearing = false;
+		};
+
+		render = {
+		    direct_scanout = true;
+		    explicit_sync = 1;
+		    explicit_sync_kms = 0;
 		};
 
 		decoration = {
